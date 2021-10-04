@@ -49,7 +49,7 @@ twitter_access_token=<your_access_token>
 twitter_access_token_secret=<your_access_token_secret>
 ```
 
-Once that information is provided in your `.env` file you can run the bot
+Once the information is provided in your `.env` file you can run the bot
 
 ```py
 python bot.py
