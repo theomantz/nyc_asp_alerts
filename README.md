@@ -24,16 +24,39 @@ Set up the virtual environment.
 python -m venv venv
 ```
 
-Then activate the virtual environment.
+Activate the virtual environment.
 
 ```sh
 . venv/bin/activate
 ```
 
-Then install dependencies.
+Install dependencies.
 
 ```sh
 pip install -r requirements.txt
 ```
 
+At this point you will need a Twitter developer account to continue. Go to https://developer.twitter.com/en/apply-for-access 
 
+Once you have a Twitter developer account you will need to populate a `.env` file in the root of the project directory with the following information.
+
+```py
+twitter_api_key=<your_api_key>
+twitter_api_secret=<your_api_secret>
+twitter_access_token=<your_access_token>
+twitter_access_token_secret=<your_access_token_secret>
+```
+
+Once that information is provided in your `.env` file you can run the bot
+
+```py
+python bot.py
+```
+
+If you would like to create a Docker container image to run on a server.
+
+```sh
+docker build . -t nyc_asp_alerts
+```
+
+Then you can `ssh` to a remote server, upload and extract the image, and set it to run with a `cronjob` or continuously.
