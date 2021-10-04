@@ -1,5 +1,7 @@
 # New York City Alternate Side Parking Twitter Bot
 
+## Here is -> [The Bot](https://twitter.com/NYCASPAlerts)
+
 ## Description:
 There is a whole lot of things to keep track of when living in New York. One of them is the various holidays which (fortunately) suspend street sweeping. This project aims to take away at least one concern for street parking drivers in New York. 
 
