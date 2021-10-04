@@ -53,10 +53,20 @@ Once that information is provided in your `.env` file you can run the bot
 python bot.py
 ```
 
-If you would like to create a Docker container image to run on a server.
+If you would like to create a Docker image to run on a server.
 
 ```sh
 docker build . -t nyc_asp_alerts
 ```
+
+To test your Docker image build
+```sh
+docker run -it -e twitter_api_key=<your_api_key> \
+-e twitter_api_secret=<your_api_secret> \
+-e twitter_access_token=<your_access_token> \
+-e twitter_access_token_secret=<your_access_token_secret> \
+nyc_asp_alerts 
+```
+**Note: when running a Docker image through a `cronjob` remove the `-it` flag as `cron` is not interactive nor supports TTY**
 
 Then you can `ssh` to a remote server, upload and extract the image, and set it to run with a `cronjob` or continuously.
